@@ -1,0 +1,22 @@
+import numpy as np
+
+A = np.array([[4, 1],
+              [2, 3]])
+
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("Matrix:")
+print(A)
+
+print("\nEigenvalues:")
+print(eigenvalues)
+
+print("\nEigenvectors:")
+print(eigenvectors)
+
+lambda_1 = eigenvalues[0]
+v_1 = eigenvectors[:, 0]
+
+print("\nVerification:")
+print("A × v =", A @ v_1)
+print("λ × v =", lambda_1 * v_1)
